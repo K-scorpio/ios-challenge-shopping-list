@@ -19,7 +19,7 @@ class GroceryListController {
     }
     
         func addItem(title: String) {
-            let groceryList = GroceryList(checked: true, title: title)
+            let groceryList = GroceryList(checked: false, title: title)
             groceryLists.append(groceryList)
     }
         

@@ -12,13 +12,12 @@
 		1A4A23241CCA8D2C003A4350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A23231CCA8D2C003A4350 /* Assets.xcassets */; };
 		1A4A23271CCA8D2C003A4350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A23251CCA8D2C003A4350 /* LaunchScreen.storyboard */; };
 		E2A1F5BE1CEF638300F7BE39 /* DetailListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5BD1CEF638300F7BE39 /* DetailListTableViewController.swift */; };
-		E2A1F5C11CEF639D00F7BE39 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5C01CEF639D00F7BE39 /* GroceryList.swift */; };
 		E2A1F5C41CEF63C100F7BE39 /* GroceryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5C31CEF63C100F7BE39 /* GroceryListController.swift */; };
-		E2A1F5C71CEF668400F7BE39 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5C61CEF668400F7BE39 /* Stack.swift */; };
 		E2A1F5C91CEF70C800F7BE39 /* GroceryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5C81CEF70C800F7BE39 /* GroceryListTableViewCell.swift */; };
-		E2A1F5CC1CEF8CA100F7BE39 /* ListEntry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5CA1CEF8CA100F7BE39 /* ListEntry.xcdatamodeld */; };
-		E2A1F5CF1CEF8D7300F7BE39 /* ListEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5CD1CEF8D7300F7BE39 /* ListEntry+CoreDataProperties.swift */; };
-		E2A1F5D01CEF8D7300F7BE39 /* ListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5CE1CEF8D7300F7BE39 /* ListEntry.swift */; };
+		E2A1F5DE1CF158ED00F7BE39 /* GroceryList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5DC1CF158ED00F7BE39 /* GroceryList.xcdatamodeld */; };
+		E2A1F5E11CF1594400F7BE39 /* GroceryList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5DF1CF1594400F7BE39 /* GroceryList+CoreDataProperties.swift */; };
+		E2A1F5E21CF1594400F7BE39 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5E01CF1594400F7BE39 /* GroceryList.swift */; };
+		E2A1F5E41CF1690700F7BE39 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A1F5E31CF1690700F7BE39 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +28,12 @@
 		1A4A23261CCA8D2C003A4350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A4A23281CCA8D2C003A4350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A1F5BD1CEF638300F7BE39 /* DetailListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailListTableViewController.swift; sourceTree = "<group>"; };
-		E2A1F5C01CEF639D00F7BE39 /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
 		E2A1F5C31CEF63C100F7BE39 /* GroceryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListController.swift; sourceTree = "<group>"; };
-		E2A1F5C61CEF668400F7BE39 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = ../../../../Stack.swift; sourceTree = "<group>"; };
 		E2A1F5C81CEF70C800F7BE39 /* GroceryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewCell.swift; sourceTree = "<group>"; };
-		E2A1F5CB1CEF8CA100F7BE39 /* ListEntry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListEntry.xcdatamodel; sourceTree = "<group>"; };
-		E2A1F5CD1CEF8D7300F7BE39 /* ListEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E2A1F5CE1CEF8D7300F7BE39 /* ListEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEntry.swift; sourceTree = "<group>"; };
+		E2A1F5DD1CF158ED00F7BE39 /* GroceryList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryList.xcdatamodel; sourceTree = "<group>"; };
+		E2A1F5DF1CF1594400F7BE39 /* GroceryList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2A1F5E01CF1594400F7BE39 /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
+		E2A1F5E31CF1690700F7BE39 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +68,8 @@
 			children = (
 				1A4A23201CCA8D2C003A4350 /* Main.storyboard */,
 				1A4A231C1CCA8D2C003A4350 /* AppDelegate.swift */,
-				E2A1F5C61CEF668400F7BE39 /* Stack.swift */,
-				E2A1F5CA1CEF8CA100F7BE39 /* ListEntry.xcdatamodeld */,
+				E2A1F5E31CF1690700F7BE39 /* Stack.swift */,
+				E2A1F5DC1CF158ED00F7BE39 /* GroceryList.xcdatamodeld */,
 				E2A1F5C51CEF63C800F7BE39 /* Controller */,
 				E2A1F5C21CEF63AB00F7BE39 /* Model */,
 				E2A1F5BF1CEF638B00F7BE39 /* View */,
@@ -94,9 +92,8 @@
 		E2A1F5C21CEF63AB00F7BE39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2A1F5CD1CEF8D7300F7BE39 /* ListEntry+CoreDataProperties.swift */,
-				E2A1F5CE1CEF8D7300F7BE39 /* ListEntry.swift */,
-				E2A1F5C01CEF639D00F7BE39 /* GroceryList.swift */,
+				E2A1F5DF1CF1594400F7BE39 /* GroceryList+CoreDataProperties.swift */,
+				E2A1F5E01CF1594400F7BE39 /* GroceryList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -181,14 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A1F5BE1CEF638300F7BE39 /* DetailListTableViewController.swift in Sources */,
+				E2A1F5E41CF1690700F7BE39 /* Stack.swift in Sources */,
+				E2A1F5E21CF1594400F7BE39 /* GroceryList.swift in Sources */,
+				E2A1F5E11CF1594400F7BE39 /* GroceryList+CoreDataProperties.swift in Sources */,
+				E2A1F5DE1CF158ED00F7BE39 /* GroceryList.xcdatamodeld in Sources */,
 				E2A1F5C91CEF70C800F7BE39 /* GroceryListTableViewCell.swift in Sources */,
-				E2A1F5C71CEF668400F7BE39 /* Stack.swift in Sources */,
-				E2A1F5CC1CEF8CA100F7BE39 /* ListEntry.xcdatamodeld in Sources */,
 				E2A1F5C41CEF63C100F7BE39 /* GroceryListController.swift in Sources */,
-				E2A1F5C11CEF639D00F7BE39 /* GroceryList.swift in Sources */,
-				E2A1F5CF1CEF8D7300F7BE39 /* ListEntry+CoreDataProperties.swift in Sources */,
 				1A4A231D1CCA8D2C003A4350 /* AppDelegate.swift in Sources */,
-				E2A1F5D01CEF8D7300F7BE39 /* ListEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +339,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E2A1F5CA1CEF8CA100F7BE39 /* ListEntry.xcdatamodeld */ = {
+		E2A1F5DC1CF158ED00F7BE39 /* GroceryList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E2A1F5CB1CEF8CA100F7BE39 /* ListEntry.xcdatamodel */,
+				E2A1F5DD1CF158ED00F7BE39 /* GroceryList.xcdatamodel */,
 			);
-			currentVersion = E2A1F5CB1CEF8CA100F7BE39 /* ListEntry.xcdatamodel */;
-			path = ListEntry.xcdatamodeld;
+			currentVersion = E2A1F5DD1CF158ED00F7BE39 /* GroceryList.xcdatamodel */;
+			path = GroceryList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

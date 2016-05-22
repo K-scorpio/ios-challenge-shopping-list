@@ -14,11 +14,11 @@ class GroceryListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var checkButton: UIButton!
     
-    var delegate = ButtonTableViewCellDelegate?()
+    var delegate = GroceryListTableViewDelegate?()
     
     @IBAction func buttonTapped(sender: AnyObject) {
         if let delegate = delegate {
-            delegate.buttonCellButtonTapped(self)
+            delegate.groceryListButtonTapped(self)
         }
     }
     
@@ -42,20 +42,19 @@ class GroceryListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
 
-protocol ButtonTableViewCellDelegate {
+
+protocol GroceryListTableViewDelegate {
     
-    func buttonCellButtonTapped(sender: GroceryListTableViewCell)
+    func groceryListButtonTapped(sender: GroceryListTableViewCell)
+}
+    extension GroceryListTableViewCell {
+        
+        func updateWithGroceryList(groceryList: GroceryList) {
+            
+            labelText.text = groceryList.name
+            updateButton(groceryList.isComplete!.boolValue)
+        }
 }
 
-//extension GroceryListTableViewCell {
-//    
-//    func updateWithTask(task: Task) {
-//        
-//        primaryLabel.text = task.name
-//        updateButton(task.isComplete.boolValue)
-//    }
-//}
-//

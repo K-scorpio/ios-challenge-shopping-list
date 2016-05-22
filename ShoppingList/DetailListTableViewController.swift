@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailListTableViewController: UITableViewController {
+class DetailListTableViewController: UITableViewController, GroceryListTableViewDelegate {
     
     var grocerylist = [GroceryList]()
     
@@ -45,7 +45,7 @@ class DetailListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -68,15 +68,26 @@ class DetailListTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("shoppingListCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("shoppingListCell", forIndexPath: indexPath) as? GroceryListTableViewCell
 
         // Configure the cell...
-        let groceryListItem = GroceryListController.sharedInstance.groceryLists[indexPath.row]
+        guard let groceryListItem = GroceryListController.sharedInstance.fetchedResultsController.objectAtIndexPath(indexPath) as? GroceryList else {
+            return GroceryListTableViewCell()
+        }
         
-        cell.textLabel?.text = groceryListItem.title
+        cell?.textLabel?.text = groceryListItem.name
+        cell?.updateWithGroceryList(groceryListItem)
+        cell?.delegate = self
+        return cell! 
+        
+    }
 
-        return cell
-        
+
+
+    func groceryListButtonTapped(sender: GroceryListTableViewCell) {
+        guard let indexPath = tableView.indexPathForCell(sender),
+            grocerylist = GroceryListController.sharedInstance.fetchedResultsController.objectAtIndexPath(indexPath) as? GroceryList else {return}
+        GroceryListController.sharedInstance.isCompleteValueToggle(grocerylist)
     }
 
 

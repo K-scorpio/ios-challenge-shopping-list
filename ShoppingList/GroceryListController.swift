@@ -13,13 +13,19 @@ class GroceryListController {
     
     static let sharedInstance = GroceryListController()
     
-    var groceryLists = [GroceryList]()
+    var groceryLists: [GroceryList] {
+        let request = NSFetchRequest(entityName: "GroceryList")
+        let moc = Stack.sharedStack.managedObjectContext
+        do {
+            return try moc.executeFetchRequest(request) as! [GroceryList]
+        } catch {
+            return []
+        }
+    }
     
     init() {
-        let request = NSFetchRequest(entityName: "Task")
-        let completedSortDescriptor = NSSortDescriptor(key: "isComplete", ascending: true)
-        let dueSortDescriptor = NSSortDescriptor(key: "due", ascending: true)
-        request.sortDescriptors = [completedSortDescriptor, dueSortDescriptor]
+        let request = NSFetchRequest(entityName: "GroceryList")
+        _ = NSSortDescriptor(key: "isComplete", ascending: true)
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: Stack.sharedStack.managedObjectContext, sectionNameKeyPath: "isComplete", cacheName: nil)
         do {
             try fetchedResultsController.performFetch()
@@ -29,16 +35,13 @@ class GroceryListController {
     }
     
     func addItem(title: String) {
-            let groceryList = GroceryList(name: title)
-            groceryLists.append(groceryList)
+//            let groceryList = GroceryList(name: title)
+//            groceryLists.append(groceryList)
         saveToPersistentStorage()
     }
         
         func removeItem(groceryItem: GroceryList) {
-            guard let indexOfGroceryList = groceryLists.indexOf(groceryItem) else {
-                return
-            }
-            groceryLists.removeAtIndex(indexOfGroceryList)
+            groceryItem.managedObjectContext?.deleteObject(groceryItem)
             saveToPersistentStorage()
     }
     
@@ -58,9 +61,9 @@ class GroceryListController {
     // MARK: - Persistence
     
     func saveToPersistentStorage() {
-        
+        let moc = Stack.sharedStack.managedObjectContext
         do {
-            try Stack.sharedStack.managedObjectContext.save()
+            try moc.save()
         } catch {
             print("Error saving Managed Object Context. Items not saved.")
         }

@@ -68,17 +68,19 @@ class DetailListTableViewController: UITableViewController, GroceryListTableView
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("shoppingListCell", forIndexPath: indexPath) as? GroceryListTableViewCell
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("shoppingListCell", forIndexPath: indexPath) as? GroceryListTableViewCell else {
+            return GroceryListTableViewCell()
+        }
 
         // Configure the cell...
         guard let groceryListItem = GroceryListController.sharedInstance.fetchedResultsController.objectAtIndexPath(indexPath) as? GroceryList else {
             return GroceryListTableViewCell()
         }
         
-        cell?.textLabel?.text = groceryListItem.name
-        cell?.updateWithGroceryList(groceryListItem)
-        cell?.delegate = self
-        return cell! 
+        cell.textLabel?.text = groceryListItem.name
+        cell.updateWithGroceryList(groceryListItem)
+        cell.delegate = self
+        return cell
         
     }
 
